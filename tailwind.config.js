@@ -1,12 +1,35 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    backgroundColor: theme => ({
+     ...theme('colors'),
+     'primary': '#F5E9E3',
+     'b-p': '#E9C0AC',
+     'b-b': '#99A9B4',
+     'b-n': '#253D55',
+     'b-y': '#E2B15F',
+    }),
+    textColor: theme => theme('colors'),
+    textColor: {
+      'bw': '#F5E9E3',
+      'b-p': '#E9C0AC',
+      'b-b': '#99A9B4',
+      'b-n': '#253D55',
+      'b-y': '#E2B15F',
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  fontFamily: {
+      'title': ['Poiret One', 'cursive'],
+      'button': [ 'Prata', 'serif'],
+      'para':['Quattrocento Sans', 'sans-serif']
+    },
+    borderColor: theme => ({
+    default: theme('colors.gray.300', 'currentColor'),
+    'primary': '#253D55',
+            })
+},
+purge: [],
+darkMode: false,
+variants: {
+  extend: {},
+},
+plugins: [],
 }
