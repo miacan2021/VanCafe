@@ -10,15 +10,15 @@ module.exports = {
     }),
     textColor: theme => theme('colors'),
     textColor: {
-      'bw': '#F5E9E3',
+      'primary': '#F5E9E3',
       'b-p': '#E9C0AC',
       'b-b': '#99A9B4',
       'b-n': '#253D55',
       'b-y': '#E2B15F',
   },
   fontFamily: {
-      'title': ['Poiret One', 'cursive'],
-      'button': [ 'Prata', 'serif'],
+      'button': ['Poiret One', 'cursive'],
+      'title': [ 'Prata', 'serif'],
       'para':['Quattrocento Sans', 'sans-serif']
     },
     borderColor: theme => ({

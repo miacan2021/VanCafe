@@ -5,12 +5,12 @@ export default function Nav() {
   return (
     <>
       <div className="flex flex-wrap font-para">
-        <div className="w-full">
+        <div className="w-full fixed z-50">
           <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-primary border border-primary">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-              <div className="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+              <div className="w-full relative flex justify-between lg:w-auto px-0 md:px-4 lg:static lg:block lg:justify-start">
                 <a
-                  className="text-md inline-block mr-4 py-2 b-nspace-nowrap text-b-n tracking-widest	"
+                  className="text-sm md:text-md inline-block mr-4 py-2 b-nspace-nowrap text-b-n tracking-widest"
                   href="/"
                 >
                  WORK FRIENDRY CAFE - VAN
