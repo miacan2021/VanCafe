@@ -22,7 +22,7 @@ const HOME = ({ newPosts }) => {
                 <a className="w-full">
                  <img className="w-full h-36 md:h-48 max-h-48 object-cover" src={post.featuredImage.node.sourceUrl} alt="cafe image"/>
                  <div className="px-6 py-4">
-                   <div className="font-bold text-md mb-2">{post.title}</div>
+                   <div className="font-bold text-md my-3">{post.title}</div>
                    <div className="font-para text-b-n text-xs" dangerouslySetInnerHTML={{ __html: post.excerpt}} ></div>
                  </div>
                  <div className="px-2 pt-1 pb-2">
