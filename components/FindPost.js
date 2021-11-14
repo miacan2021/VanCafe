@@ -1,12 +1,16 @@
 import React from 'react'
 import AreaBtn from './AreaBtn'
+import SectionTitle from './SectionTitle'
 
 const FindPost = () => {
     return (
-        <div className="w-screen h-screen bg-b-b">
-           <AreaBtn />
-        </div>
+        <>
+        <SectionTitle title={'FIND CAFE'} />
+        <AreaBtn />
+        <SectionTitle title={'NEW POSTS'} />
+        </>
     )
 }
 
 export default FindPost
+
