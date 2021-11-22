@@ -31,5 +31,7 @@ darkMode: false,
 variants: {
   extend: {},
 },
-plugins: [],
+plugins: [
+  require('@tailwindcss/typography'),
+],
 }

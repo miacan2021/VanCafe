@@ -1,4 +1,3 @@
-import fetcher from "../../lib/fetcher";
 import { useRouter } from 'next/router'
 import { getPost, getAllPostsSlug} from "../../lib/getPost";
 
@@ -13,7 +12,11 @@ const post = ({postData}) =>{
             {router.isFallback?(
                 <div>Loading...</div>)
                 :
-                (<div dangerouslySetInnerHTML={{__html: postData.title}}/>
+                (
+                <>
+                <div className="prose-2xl text-center font-title m-4" dangerouslySetInnerHTML={{__html: postData.title}}/>
+                <div className="prose text-center break-words lg:prose-x prose-indigo font-para w-9/12 mx-auto" dangerouslySetInnerHTML={{__html: postData.content}}/>
+                </>
             )}
         </div>
     )
