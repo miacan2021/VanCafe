@@ -9,6 +9,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/typography": "^0.4.1",
     "express": "^4.17.1",
+    "google-map-react": "^2.1.10",
     "next": "latest",
     "next-routes": "^1.4.2",
     "react": "^17.0.2",
