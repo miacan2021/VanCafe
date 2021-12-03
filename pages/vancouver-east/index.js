@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import getNewPosts from '../../lib/getNewPosts'
+import getEastPosts from '../../lib/getEastPosts'
 
-const vancouverEast = ({newPosts}) => {
+const vancouverEast = ({eastPosts}) => {
     return (
         <div className="flex flex-col md:flex-row justify-around items-center w-full lg:w-11/12 m-auto">
-        {newPosts.map((post, i)=>(
+        {eastPosts.map((post, i)=>(
            <div className="w-11/12 md:w-3/12 h-70 md:h-96 max-h-96 rounded overflow-hidden shadow-lg bg-primary hover:bg-b-p flex flex-col justify-between items-center text-center mt-3" key={i}>
         <Link href={`/vancouver-east/${post.slug}`}>
            <a className="w-full">
@@ -28,8 +28,8 @@ const vancouverEast = ({newPosts}) => {
 export default vancouverEast
 
 export async function getStaticProps(){
-    const newPosts = await getNewPosts();
+    const eastPosts = await getEastPosts();
     return {
-        props: {newPosts},
+        props: {eastPosts},
     }
 }
