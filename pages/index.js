@@ -6,15 +6,12 @@ import Nav from '../components/Nav'
 import getNewPosts from '../lib/getNewPosts'
 import Link from 'next/link'
 import Form from '../components/Form'
-import axios from 'axios';
+import getAreas from '../lib/getAreas'
 
 
-    
-
-const HOME = ({ newPosts }) => {
-  const WP_AUTH = process.env.WORDPRESS_AUTH_REFRESH_TOKEN
-  axios.defaults.headers.common['Authorization'] = 'bearer' + WP_AUTH;
-
+const HOME = ({ newPosts, listAreas }) => {
+    const areas = []
+    listAreas.forEach((area)=>{area.categories.nodes.forEach((a)=>areas.push(a.slug))})
     return (
     <>
         <HeadComponent/>
@@ -41,7 +38,7 @@ const HOME = ({ newPosts }) => {
             ))}
             </div>
             </div>
-            <Form />
+            <Form areas={areas} />
     </>
     )
 }
@@ -50,7 +47,8 @@ export default HOME
 
 export async function getStaticProps(){
     const newPosts = await getNewPosts();
+    const listAreas = await getAreas();
     return {
-        props: {newPosts},
+        props: {newPosts,listAreas}
     }
 }
