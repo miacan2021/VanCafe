@@ -5,9 +5,16 @@ import Hero from '../components/Hero'
 import Nav from '../components/Nav'
 import getNewPosts from '../lib/getNewPosts'
 import Link from 'next/link'
+import Form from '../components/Form'
+import axios from 'axios';
 
+
+    
 
 const HOME = ({ newPosts }) => {
+  const WP_AUTH = process.env.WORDPRESS_AUTH_REFRESH_TOKEN
+  axios.defaults.headers.common['Authorization'] = 'bearer' + WP_AUTH;
+
     return (
     <>
         <HeadComponent/>
@@ -34,6 +41,7 @@ const HOME = ({ newPosts }) => {
             ))}
             </div>
             </div>
+            <Form />
     </>
     )
 }
