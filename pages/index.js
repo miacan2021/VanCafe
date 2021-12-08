@@ -24,7 +24,7 @@ const HOME = ({ newPosts, listAreas }) => {
                 <div className="w-11/12 md:w-3/12 h-70 md:h-96 max-h-96 rounded overflow-hidden shadow-lg bg-primary hover:bg-b-p flex flex-col justify-between items-center text-center mt-3" key={i}>
                  <Link href={`/new/${post.slug}`}>
                 <a className="w-full">
-                 <img className="w-full h-36 md:h-48 max-h-48 object-cover" src={post.featuredImage.node.sourceUrl} alt="cafe image"/>
+                 <img className="w-full h-36 md:h-48 max-h-48 object-cover" src={post.featuredImage.node.sourceUrl && post.featuredImage.node.sourceUrl} alt="cafe image"/>
                  <div className="px-6 py-4">
                    <div className="font-bold text-md my-3">{post.title}</div>
                    <div className="font-para text-b-n text-xs" dangerouslySetInnerHTML={{ __html: post.excerpt}} ></div>

@@ -14,7 +14,7 @@ const Form = ({areas}) => {
     sendPost(name, text, cate)
     nameRef.current.value = ''
     textRef.current.value = ''
-    categoriyRef.current.value = ''
+    categoriyRef.current.value = 'DOWNTOWN'
   }
 return(
 <div class="container mx-auto">
