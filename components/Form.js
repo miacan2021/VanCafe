@@ -17,7 +17,7 @@ const Form = ({areas}) => {
     nameRef.current.value = ''
     textRef.current.value = ''
     categoryRef.current.value = 'DOWNTOWN'
-    imgRef.current = ''
+    imgRef.current.value = ''
   }
 return(
 <div class="container mx-auto">
