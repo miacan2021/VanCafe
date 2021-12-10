@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import {useDropzone} from 'react-dropzone'
 
-
 export const DropArea = ({imgData, setImgData}) => {
     const [imgUrl, setImgUrl] = useState()
     const onDrop = useCallback((acceptedFile) => {
