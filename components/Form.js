@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react'
 import sendPost from '../lib/sendPost'
+import Alert from './Alert'
 import { DropArea } from './DropArea'
 
 
@@ -21,6 +22,7 @@ const Form = ({areas}) => {
     categoryRef.current.value = 'DOWNTOWN'
     setImgData(undefined)
   }
+  
 return(
 <div class="container mx-auto">
   <div class="max-w-xl p-5 mx-auto my-10 bg-white rounded-md shadow-sm">

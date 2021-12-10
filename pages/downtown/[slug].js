@@ -90,7 +90,6 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps({params}){
-
     const data = await getPost(params.slug)
     return{
         props:{
