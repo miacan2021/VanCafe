@@ -1,7 +1,6 @@
 import { useRouter} from 'next/router'
 import { useState } from 'react';
 import { getPost, getAllPostsSlug} from "../../lib/getPost";
-import Error from '../error';
 import GoogleMapReact from 'google-map-react';
 import Link from 'next/link';
 
@@ -83,9 +82,10 @@ export default post;
 export async function getStaticPaths(){
     const allPosts = await getAllPostsSlug()
     return{
-        paths: allPosts.edges.map(({node}) => `/vancouver-west/${node.slug}`) || [],
+        paths: allPosts.edges.map(({node}) => `/cafe/${node.slug}`) || [],
         fallback: false,
     }
+    
 }
 
 export async function getStaticProps({params}){

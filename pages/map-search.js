@@ -1,7 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import ReactMapGL, {FullscreenControl, Popup} from 'react-map-gl';
 import Pins from '../components/Pins';
 import getAllMapData from '../lib/getAllMapData';
+import Link from 'next/link';
 
 const token = process.env.NEXT_PUBLIC_MAP_BOX_TOKEN
 
@@ -20,7 +21,6 @@ const mapSearch = ({mapData}) => {
       });
 
       const [popupInfo, setPopupInfo] = useState(null);
-
       return (
           <>
         <div className="mapbox-react">
@@ -43,6 +43,7 @@ const mapSearch = ({mapData}) => {
             closeOnClick={false}
             onClose={setPopupInfo}
           >
+        <Link href={`/cafe/${popupInfo.slug}`}><a>Link to article</a></Link>
          <h1>{popupInfo.title}</h1>
           </Popup>
         )}
@@ -55,9 +56,8 @@ const mapSearch = ({mapData}) => {
 export default mapSearch
 
 export async function getStaticProps(){
-    const mapData = await getAllMapData();
+    const mapData = await getAllMapData()
     return {
         props: { mapData },
     }
 }
-
