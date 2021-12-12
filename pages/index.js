@@ -13,7 +13,7 @@ const HOME = ({ newPosts, listAreas }) => {
     listAreas.forEach((area)=>{area.categories.nodes.forEach((a)=>areas.push(a.slug))})
     return (
     <>
-        <HeadComponent/>
+        <HeadComponent />
         <Nav />
         <Hero />
         <div className="w-screen h-auto bg-b-b">
