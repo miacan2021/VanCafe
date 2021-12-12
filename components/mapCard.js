@@ -1,15 +1,19 @@
-import React, {useMemo} from 'react'
+import React from 'react'
+import Link from 'next/link';
 
-const mapCard = ({name, lat, lng, time, adress, img}) => {
+
+const MapCard = ({data}) => {
     return (
-    <div className="cursor-pointer bg-white w-40 h-auto p-1 text-b-n rounded-sm flex flex-col justify-center items-center transform -translate-x-28 -translate-y-10">
-    <p className="text-md">{name}</p>
-    <p className="font-pra text-center mb-1">{adress}</p>
-    <p>{time.open} - {time.close}</p>
-    <img src={img} alt="cafe image" />
-    <Link href={`https://maps.google.com?q=${lat},${lng}`}><a className="text-b-p">View on Google Maps</a></Link>
-</div>
+    <div className='text-center rounded overflow-hidden'>
+    <img src={data.featuredImage.node.sourceUrl} alt="cafe image" className='w-full max-w-xs h-28 lg:h-36 object-cover mx-auto' />
+    <div class="sm:px-0 lg:px-6 md:py-4 max-w-xs">
+    <p className="text-sm lg:text-md mb-2">{data.title}</p>
+    <p className="text-xs lg:text-sm font-pra mb-1">{data.adress.adress}</p>
+    <p className="w-64 font-pra mb-2 whitespace-normal text-xs">{data.time.open} - {data.time.close}</p>
+    <Link href={`https://maps.google.com?q=${data.location.lat},${data.location.lng}`}><a className="text-b-p text-sm lg:text-md">View on Google Maps</a></Link>
+    </div>
+    </div>
     )
 }
 
-export default useMemo(mapCard)
+export default MapCard
