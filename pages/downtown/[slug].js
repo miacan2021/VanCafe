@@ -49,6 +49,7 @@ return (
                 (
                 <div className="bg-primary text-b-n w-screen h-auto">
                 <h1 className="font-title text-3xl text-center pt-3 mb-3">{postData.title}</h1>
+                <img src={postData.featuredImage.node.sourceUrl} alt="cafe image" className='w-full max-w-xs h-28 lg:h-36 object-cover mx-auto' />
                 <div className="prose text-center break-words lg:prose-x prose-indigo font-para w-9/12 h-auto flex flex-col items-center justify-center mx-auto rounded-sm " dangerouslySetInnerHTML={{__html: postData.content}}/>
                 
                 <h1 className="font-title text-xl text-center mb-3">ACCESS</h1>
