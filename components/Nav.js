@@ -11,7 +11,7 @@ export default function Nav() {
               <div className="w-full relative flex justify-between lg:w-auto px-0 md:px-4 lg:static lg:block lg:justify-start">
                 <a
                   className="text-sm md:text-md inline-block mr-4 py-2 b-nspace-nowrap text-b-n tracking-widest"
-                  href="/"
+                  href="#"
                 >
                  WORK FRIENDRY CAFE - VAN
                 </a>
@@ -35,7 +35,7 @@ export default function Nav() {
                   <li className="nav-item">
                     <a
                       className="tracking-wider	px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75"
-                      href="#pablo"
+                      href="#find-cafes"
                     >
                       FIND CAFES
                     </a>
@@ -43,7 +43,7 @@ export default function Nav() {
                   <li className="nav-item">
                     <a
                       className="tracking-wider px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75"
-                      href="#pablo"
+                      href="#request"
                     >
                       SEND CAFE INFO
                     </a>

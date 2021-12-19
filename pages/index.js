@@ -16,7 +16,7 @@ const HOME = ({ newPosts, listAreas }) => {
         <HeadComponent />
         <Nav />
         <Hero />
-        <div className="w-screen h-auto bg-b-b">
+        <div id='find-cafes' className=" bg-b-b pb-10">
         <FindPost />
         <div className="flex flex-col md:flex-row justify-around items-center w-full lg:w-11/12 m-auto">
              {newPosts.map((post, i)=>(

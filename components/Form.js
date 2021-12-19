@@ -30,7 +30,7 @@ const Form = ({areas}) => {
 
   
 return(
-  <div className="container mx-auto w-screen h-screen relative">
+  <div id="request" className="container mx-auto w-screen h-screen relative">
     {sendData ?  <Alert /> : <span></span>}
   <div className="max-w-xl p-5 mx-auto rounded-md shadow-sm">
     <div className="text-center text-b-p">
