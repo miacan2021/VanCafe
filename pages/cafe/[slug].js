@@ -12,6 +12,9 @@ const post = ({postData}) =>{
         zoom: 14,
       });
 
+      const [popupInfo, setPopupInfo] = useState(null);
+
+
     return(
              <div className="bg-primary text-b-n w-screen h-screen">
                 <h1 className="font-title text-3xl text-center pt-3 mb-3">{postData.title}</h1>
@@ -20,12 +23,12 @@ const post = ({postData}) =>{
                 <h1 className="font-title text-xl text-center mb-3">ACCESS</h1>
                 <h2 className="font-title text-mg text-center">{postData.title}</h2>
                 <h3 className="font-pra text-sm text-center mb-1">{postData.adress.adress}</h3>
-                <h3 className="font-pra text-sm text-center mb-5">{postData.adress.zip}</h3>
-            <div className="mapbox-react relative bottom-2 left-1/2 transform -translate-x-1/4">
-            <ReactMapGL
+                <h3 className="font-pra text-sm text-center mb-3">{postData.adress.zip}</h3>
+         <div className="mapbox-react absolute left-1/2 transform -translate-x-1/2">
+         <ReactMapGL
             {...viewport}
-            width="50vw"
-            height="50vh"
+            width="50vh"
+            height="40vh"
             mapStyle='mapbox://styles/miacan2021/ckx2yfuly4moi14lg6ny9mqja'
             onViewportChange={nextViewport => setViewport(nextViewport)}
             mapboxApiAccessToken={token}

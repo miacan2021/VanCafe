@@ -7,7 +7,8 @@ const AreaBtn = () => {
     const areas = [
         'downtown',
         'vancouver-east',
-        'vancouver-west'
+        'vancouver-west',
+        'other-cities'
     ]
     return (
         <div className="mb-4 flex justify-between flex-col md:flex-row m-auto">
