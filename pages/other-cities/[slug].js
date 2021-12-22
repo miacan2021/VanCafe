@@ -22,7 +22,7 @@ const post = ({postData}) =>{
                 <h1 className="font-title sm:text-lg md:text-3xl text-center px-3 py-5 bg-primary rounded-lg border">{postData.title}</h1>
                 </div>
                 </div>
-                <div className="md:pt-10 lg:pt-20 pb-10 bg-primary">
+                <div className="pt-10 lg:pt-20 pb-10 bg-primary">
                 <div className="mx-auto p-3 sm:w-full md:w-2/3 rounded-lg border">
                 <div className='rounded-lg border py-5'>
                 <div className="flex justify-around items-center flex-col lg:flex-row px-5">

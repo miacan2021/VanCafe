@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -9,17 +10,14 @@ export default function Nav() {
           <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-primary border border-primary">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto px-0 md:px-4 lg:static lg:block lg:justify-start">
-                <a
-                  className="text-sm md:text-md inline-block mr-4 py-2 b-nspace-nowrap text-b-n tracking-widest"
-                  href="#"
-                >
+              <Link href="/"><a className="text-sm md:text-md inline-block mr-4 py-2 b-nspace-nowrap text-b-n tracking-widest">
                  WORK FRIENDRY CAFE - VAN
                 </a>
+                </Link>
                 <button
                   className="text-b-n cursor-pointer text-sm leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                   type="button"
-                  onClick={() => setMenuOpen(!menuOpen)}
-                >
+                  onClick={() => setMenuOpen(!menuOpen)}>
                   <div className="bg-b-n w-1 h-1 rounded-full"></div>
                   <div className="bg-b-n w-1 h-1 rounded-full mt-1"></div>
                   <div className="bg-b-n w-1 h-1 rounded-full mt-1"></div>
@@ -33,20 +31,18 @@ export default function Nav() {
               >
                 <ul className="flex flex-col mt-3 lg:flex-row list-none lg:ml-auto">
                   <li className="nav-item">
-                    <a
-                      className="tracking-wider	px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75"
-                      href="#find-cafes"
-                    >
+                  <Link href="/#find-cafes" scroll={false}>
+                    <a className="tracking-wider	px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75">
                       FIND CAFES
                     </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
-                      className="tracking-wider px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75"
-                      href="#request"
-                    >
+                  <Link href="/#request" scroll={false}>
+                    <a className="tracking-wider px-3 py-2 flex items-center text-xs uppercase leading-snug text-b-n hover:opacity-75">
                       SEND CAFE INFO
                     </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
