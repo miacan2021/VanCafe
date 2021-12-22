@@ -22,7 +22,7 @@ const mapSearch = ({mapData}) => {
         <>
         <MapHead />
         <div className="mapbox-react relative">
-          <div className="absolute top-5 left-3 z-10 bg-primary rounded-md flex justify-center items-cente p-3">
+          <div className="absolute top-5 left-3 z-10 bg-primary rounded-md flex justify-center items-cente p-3 hover:bg-b-p hover:text-primary">
            <Link href="/"><a className='flex'>
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z"></path></svg>
           Home</a></Link>

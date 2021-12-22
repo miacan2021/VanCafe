@@ -11,13 +11,13 @@ const AreaBtn = () => {
         'other-cities'
     ]
     return (
-        <div className="mb-4 flex justify-between flex-col md:flex-row m-auto">
+        <div className="mb-4 flex justify-center items-center lg:justify-between lg:items-stretch flex-col md:flex-row m-auto text-sm">
             {areas.map((area,i) => (
-                <Link href={area}>
+            <Link href={area}>
              <a>
               <Button key={i} title={area}></Button>
               </a>
-              </Link>
+            </Link>
             ))}
         </div>
     )

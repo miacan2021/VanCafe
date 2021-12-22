@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { getPost, getAllPostsSlug} from "../../lib/getPost";
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const token = process.env.NEXT_PUBLIC_MAP_BOX_TOKEN
 
@@ -11,6 +12,7 @@ const post = ({postData}) =>{
         longitude: postData.location.lng,
         zoom: 14,
       });
+    const router = useRouter()
 
     return(
              <div className="bg-primary text-b-n w-screen h-screen">
@@ -26,10 +28,10 @@ const post = ({postData}) =>{
                 <div className="flex justify-around items-center flex-col lg:flex-row px-5">
                 <div className="detail md:pr-0 lg:pr-3">
                 <h1 className="font-title text-xl text-center pt-2 pb-3">POINTS</h1>
-                <div className="mx-auto w-16 h-0.5 bg-b-n mb-3"></div>
+                <div className="mx-auto w-16 h-0.5 bg-b-n mb-3 rounded"></div>
                 <div className="prose text-center break-words lg:prose-x prose-indigo font-para flex flex-col items-center justify-center mx-auto" dangerouslySetInnerHTML={{__html: postData.content}}/>
-                <h1 className="font-title text-xl text-center pb-3">ACCESS</h1>
-                <div className="mx-auto w-16 h-0.5 bg-b-n mb-3"></div>
+                <h1 className="font-title text-xl text-center pt-5 pb-3">ACCESS</h1>
+                <div className="mx-auto w-16 h-0.5 bg-b-n rounded mb-3"></div>
                 <h2 className="font-title text-mg text-center">{postData.title}</h2>
                 <h3 className="font-pra text-sm text-center mb-1">{postData.adress.adress}</h3>
                 <h3 className="font-pra text-sm text-center mb-5">{postData.adress.zip}</h3>
@@ -63,6 +65,10 @@ const post = ({postData}) =>{
         </div>
         </div>
         </div>
+        <button className='mt-5 flex justify-center items-center hover:bg-b-p hover:text-primary rounded-xl p-3 border mx-auto' onClick={() => router.back()}>
+        <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z"></path></svg>
+          Back
+        </button>
         </div>
         </div>
     )
