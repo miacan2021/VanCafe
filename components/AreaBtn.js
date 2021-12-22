@@ -13,9 +13,9 @@ const AreaBtn = () => {
     return (
         <div className="mb-4 flex justify-center items-center lg:justify-between lg:items-stretch flex-col md:flex-row m-auto text-sm">
             {areas.map((area,i) => (
-            <Link href={area}>
+            <Link href={`/${area}`} key={i}>
              <a>
-              <Button key={i} title={area}></Button>
+              <Button title={area}></Button>
               </a>
             </Link>
             ))}

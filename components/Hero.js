@@ -12,9 +12,8 @@ const Hero = () => {
             <div className="w-11/12 lg:w-5/12 m-auto lg:ml-24 flex flex-col items-center text-center">
             <h2 className="font-title mb-10 tracking-wide text-2xl text-b-n uppercase pr-1">Are you looking for a cafe for work or study?</h2>
             <p className="font-para text-lg text-b-n mb-10 p-2">You can find cafes in Vancouver that have power outlets and Wi-Fi available.</p>
-            <button class="font-button tracking-widest bg-transparent border border-b-n text-b-n py-2 px-4 rounded
-            hover:bg-b-p">
-            FIND CAFES</button>
+            <a href="#find-cafes" className="font-button tracking-widest bg-transparent border border-b-n text-b-n py-2 px-4 rounded hover:bg-b-p">
+            FIND CAFES</a>
             </div>
             </div>
             <div className="w-screen md:w-6/12 h-screen bg-b-p border border-primary flex flex-col items-center lg:items-end justify-center">
@@ -25,6 +24,8 @@ const Hero = () => {
             If you have any information about cafes with wifi and power outlets, please fill out the request form and send it to me.
             Thank you for your cooporation.
              </p>
+             <a href="#request" className="font-button tracking-widest bg-transparent border border-b-n text-b-n py-2 px-4 rounded hover:bg-primary">
+            SEND CAFE INFOMATION</a>
              </div>
             </div>
             </div>

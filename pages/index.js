@@ -51,6 +51,6 @@ export async function getStaticProps(){
     const newPosts = await getNewPosts();
     const listAreas = await getAreas();
     return {
-        props: {newPosts,listAreas}
+        props: {newPosts, listAreas}
     }
 }
