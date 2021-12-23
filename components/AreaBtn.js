@@ -6,8 +6,8 @@ import Button from './Button'
 const AreaBtn = () => {
     const areas = [
         'downtown',
-        'vancouver-east',
-        'vancouver-west',
+        'east-vancouver',
+        'west-vancouver',
         'other-cities'
     ]
     return (

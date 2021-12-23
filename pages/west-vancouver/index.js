@@ -8,8 +8,9 @@ const vancouverEast = ({westPosts}) => {
       <>
       <Nav />
      <div className='bg-b-b w-screen h-screen pt-36'>
-       <h1 className='text-primary text-2xl lg:text-3xl font-title text-center mb-5'>Vancouver West Area</h1>
+       <h1 className='text-primary text-2xl lg:text-3xl font-title text-center mb-5'>West Vancouver Area</h1>
        <div className="w-16 lg:w-24 h-0.5 bg-primary mx-auto"></div>
+      
       <div className="flex flex-col md:flex-row justify-around items-center w-full lg:w-11/12 m-auto pt-10">
       {westPosts.map((post, i)=>(
          <div className="w-9/12 md:w-3/12 h-70 md:h-96 max-h-96 rounded overflow-hidden shadow-lg bg-primary hover:bg-b-p flex flex-col justify-between items-center text-center mt-3" key={i}>
