@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import getWestPosts from '../../lib/getWestPosts'
 import Nav from '../../components/Nav'
+import getOtherCities from '../../lib/getOtherCities'
 
-const otherCities = ({westPosts}) => {
+const otherCities = ({otherPosts}) => {
     return (
       <>
       <Nav />
@@ -12,7 +12,7 @@ const otherCities = ({westPosts}) => {
        <div className="w-16 lg:w-24 h-0.5 bg-primary mx-auto"></div>
       
       <div className="flex flex-col md:flex-row justify-around items-center w-full lg:w-11/12 m-auto pt-10">
-      {westPosts.map((post, i)=>(
+      {otherPosts.map((post, i)=>(
          <div className="w-9/12 md:w-3/12 h-70 md:h-96 max-h-96 rounded overflow-hidden shadow-lg bg-primary hover:bg-b-p flex flex-col justify-between items-center text-center mt-3" key={i}>
           <Link href={`/other-cities/${post.slug}`}>
          <a className="w-full">
@@ -46,7 +46,7 @@ const otherCities = ({westPosts}) => {
 export default otherCities
 
 export async function getStaticProps(){
-    const westPosts = await getWestPosts();
+    const otherPosts = await getOtherCities()
     return {
         props: {westPosts},
     }
