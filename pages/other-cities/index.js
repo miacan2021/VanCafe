@@ -48,6 +48,6 @@ export default otherCities
 export async function getStaticProps(){
     const otherPosts = await getOtherCities()
     return {
-        props: {westPosts},
+        props: {otherPosts},
     }
 }
