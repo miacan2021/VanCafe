@@ -10,8 +10,8 @@ const MapCard = ({data}) => {
     <p className="text-sm lg:text-md mb-2">{data.title}</p>
     <p className="text-xs lg:text-sm font-pra mb-1">{data.adress.adress}</p>
     <p className="w-64 font-pra mb-2 whitespace-normal text-xs">{data.time.open} - {data.time.close}</p>
-    <Link href={`/cafe/${data.slug}`}><a className="text-b-p text-sm lg:text-md">Go to detail page</a></Link>
-    <Link href={`https://maps.google.com?q=${data.location.lat},${data.location.lng}`}><a className="text-b-p text-sm lg:text-md">View on Google Maps</a></Link>
+    <Link href={`/cafe/${data.slug}`}><a className="text-b-y text-sm lg:text-md">Go to detail page</a></Link><br />
+    <Link href={`https://maps.google.com?q=${data.location.lat},${data.location.lng}`}><a className="text-b-y text-sm lg:text-md">View on Google Maps</a></Link>
     </div>
     </div>
     )

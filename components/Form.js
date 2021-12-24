@@ -44,7 +44,7 @@ return(
     <div className="text-center mb-3">
       <h1 className="my-5 text-2xl font-title font-light">SEND CAFE INFOMATION</h1>
       <div className='w-28 h-0.5 bg-b-n rounded mx-auto mb-8'></div>
-      <p className='font-para'>Fill up the form below to send me information.</p>
+      <p className='font-para'>If you know of a cafe near Vancouver that has power and wifi, please send me the information!</p>
     </div>
     <div>
       <form>
@@ -78,9 +78,11 @@ return(
             rows="5"
             ref={ textRef }
             name="message"
-            placeholder="Your Message"
+            placeholder=""
+            defaultValue={"How many tables with an outlet? Is the Wi-Fi connection stable? etc..."}
             className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-            required></textarea>
+            required>
+            </textarea>
         </div>
         <DropArea imgData={imgData} setImgData={setImgData} />
         <div className="mb-6">
