@@ -79,7 +79,7 @@ export default post;
 export async function getStaticPaths(){
     const allPosts = await getAllPostsSlug()
     return{
-        paths: allPosts.edges.map(({node}) => `https://work-friendly-cafe-van/cafe/${node.slug}`) || [],
+        paths: allPosts.edges.map(({node}) => `https://work-friendly-cafe-van-miacan2021.vercel.app/cafe/${node.slug}`) || [],
         fallback: false,
     }
     
