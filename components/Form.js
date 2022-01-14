@@ -45,6 +45,7 @@ return(
       <h1 className="my-5 text-2xl font-title font-light">SEND CAFE INFOMATION</h1>
       <div className='w-28 h-0.5 bg-b-n rounded mx-auto mb-8'></div>
       <p className='font-para'>If you know of a cafe near Vancouver that has power and wifi, please send me the information!</p>
+      <p className='font-para'>*  The information that you provided will show up after approval from the admin.</p>
     </div>
     <div>
       <form>
