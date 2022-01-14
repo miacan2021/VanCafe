@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReactMapGL, {Popup} from 'react-map-gl';
 import Pins from '../components/Pins';
 import getAllMapData from '../lib/getAllMapData';
+import MapHead from '../components/MapHead';
 import Link from 'next/link'
 
 const token = process.env.NEXT_PUBLIC_MAP_BOX_TOKEN
