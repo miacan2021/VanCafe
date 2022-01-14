@@ -26,7 +26,7 @@ module.exports = {
     'primary': '#253D55',
             })
 },
-purge: [],
+purge: false,
 darkMode: false,
 variants: {
   extend: {},
