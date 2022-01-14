@@ -10,7 +10,7 @@ const MobileMapCard = ({popupInfo, setPopupInfo}) => {
         <p className="text-sm mb-3">{popupInfo.title}</p>
         <p className="text-xs font-pra mb-2">{popupInfo.adress.adress}</p>
         <p className="font-pra whitespace-normal text-xs mb-2">{popupInfo.time.open} - {popupInfo.time.close}</p>
-        <Link href={`/cafe/${data.slug}`}><a className="text-b-p text-sm lg:text-md">Go to detail page</a></Link>
+        <Link href={`/cafe/${popupInfo.slug}`}><a className="text-b-p text-sm lg:text-md">Go to detail page</a></Link>
         <Link href={`https://maps.google.com?q=${popupInfo.location.lat},${popupInfo.location.lng}`}><a className="text-b-y text-sm">View on Google Maps</a></Link>
         <svg onClick={() => setPopupInfo(null)} className="w-6 h-6 absolute top-1 left-1/2 transform -translate-x-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
      </div>

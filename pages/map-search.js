@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReactMapGL, {Popup} from 'react-map-gl';
 import Pins from '../components/Pins';
 import getAllMapData from '../lib/getAllMapData';
+import MapCard from '../components/MapCard';
 import MobileMapCard from '../components/MobileMapCard';
 import MapHead from '../components/MapHead';
 import Link from 'next/link'
@@ -45,7 +46,7 @@ const mapSearch = ({mapData}) => {
             onClose={setPopupInfo}
             onClick={() => setPopupInfo(null)} 
           >
-          <MapCard data={popupInfo} />
+          <MapCard popupInfo={popupInfo} />
           </Popup>
         : popupInfo && window.matchMedia('(max-width: 425px)').matches ? 
           <MobileMapCard popupInfo={popupInfo} setPopupInfo={setPopupInfo} />
