@@ -80,7 +80,7 @@ export default post;
 export async function getStaticPaths(){
     const allPosts = await getAllPostsSlug()
     return{
-        paths: allPosts.edges.map(({node}) => `/new/${node.slug}`) || [],
+        paths: allPosts.edges.map(({node}) => `https://work-friendly-cafe-van/new/${node.slug}`) || [],
         fallback: false,
     }
     
