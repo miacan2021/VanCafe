@@ -30,11 +30,16 @@ const post = ({postData}) =>{
                 <h1 className="font-title text-xl text-center pt-2 pb-3">POINTS</h1>
                 <div className="mx-auto w-16 h-0.5 bg-b-n mb-3 rounded"></div>
                 <div className="prose text-center break-words lg:prose-x prose-indigo font-para flex flex-col items-center justify-center mx-auto" dangerouslySetInnerHTML={{__html: postData.content}}/>
+                <h1 className="font-title text-xl text-center pt-5 pb-3">OPENING HOURS</h1>
+                <div className="mx-auto w-16 h-0.5 bg-b-n rounded mb-3"></div>
+                <h3 className="font-pra text-sm text-center mb-1">open : {postData.time.open}</h3>
+                <h3 className="font-pra text-sm text-center mb-1">close : {postData.time.close}</h3>
                 <h1 className="font-title text-xl text-center pt-5 pb-3">ACCESS</h1>
                 <div className="mx-auto w-16 h-0.5 bg-b-n rounded mb-3"></div>
                 <h2 className="font-title text-mg text-center">{postData.title}</h2>
                 <h3 className="font-pra text-sm text-center mb-1">{postData.adress.adress}</h3>
                 <h3 className="font-pra text-sm text-center mb-5">{postData.adress.zip}</h3>
+               
                 </div>
          <div className="mapbox-react relative ml-0 lg:ml-3">
          <ReactMapGL
