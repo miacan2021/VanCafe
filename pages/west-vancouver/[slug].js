@@ -17,7 +17,10 @@ const post = ({postData}) =>{
     return(
              <div className="bg-primary text-b-n w-screen h-screen">
                 <div className="relative h-1/3 w-full">
-                <img src={postData.featuredImage.node.sourceUrl} alt="cafe image" className='absolute z-0 top-0 left-0 w-full h-80 object-cover' />
+                {post.featuredImage ? 
+                 <img className='absolute z-0 top-0 left-0 w-full h-80 object-cover' src={postData.featuredImage.node.sourceUrl} alt="cafe image" /> :
+                 <img className='absolute z-0 top-0 left-0 w-full h-80 object-cover' src='/Noimage.png' alt="cafe image"/>
+                }
                 <div className="absolute top-28 left-1/2 transform -translate-x-1/2 p-3 w-1/2 rounded-lg border">
                 <h1 className="font-title sm:text-lg md:text-3xl text-center px-3 py-5 bg-primary rounded-lg border">{postData.title}</h1>
                 </div>
