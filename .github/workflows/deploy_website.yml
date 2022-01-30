@@ -21,7 +21,6 @@ jobs:
       - name: Recreate all posts
         shell: bash
         run: |
-          yarn
           yarn build
       - uses: amondnet/vercel-action@v20
         with:
