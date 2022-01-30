@@ -22,7 +22,7 @@ const otherCities = ({otherPosts}) => {
          }
           <div className="flex flex-col items-center justify-evenly px-4 h-40 md:h-52">
             <div className="font-bold text-sm my-1">{post.title}</div>
-            <div className="font-para text-b-n text-xs" dangerouslySetInnerHTML={{ __html: post.excerpt}} ></div>
+            <div className="font-para text-b-n text-xs" dangerouslySetInnerHTML={{ __html: post.excerpt.length > 55 ? post.excerpt.slice(0, 55).concat('...') : post.excerpt}} ></div>
           <div className="px-2 pt-1 pb-1">
             {post.categories.nodes.map((cat, i)=>(<span className="inline-block bg-b-b rounded-full px-2 text-xs text-primary font-button tracking-wider mr-2 mb-2" key={i}>{cat.name}</span>))}
           </div>

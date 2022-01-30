@@ -45,7 +45,10 @@ const mapSearch = ({mapData}) => {
             onClick={() => setPopupInfo(null)} 
           >
               <div className='text-center rounded overflow-hidden'>
-              <img src={ popupInfo.featuredImage.node.sourceUrl} alt="cafe image" className='w-full max-w-xs h-28 lg:h-36 object-cover mx-auto' />
+              {popupInfo.featuredImage ? 
+                 <img className='w-full max-w-xs h-28 lg:h-36 object-cover mx-auto' src={popupInfo.featuredImage.node.sourceUrl} alt="cafe image" /> :
+                 <img className='w-full max-w-xs h-28 lg:h-36 object-cover mx-auto' src='/Noimage.png' alt="cafe image"/>
+                }     
               <div class="sm:px-0 lg:px-6 md:py-4 max-w-xs">
               <p className="text-sm lg:text-md mb-2">{ popupInfo.title}</p>
               <p className="text-xs lg:text-sm font-pra mb-1">{ popupInfo.adress.adress}</p>
@@ -56,14 +59,18 @@ const mapSearch = ({mapData}) => {
               </div>
           </Popup>
         : popupInfo && window.matchMedia('(max-width: 425px)').matches ? 
-              <div className='w-screen h-1/4 bg-primary absolute bottom-0 left-0 flex items-center justify-center overflow-hidden'>
-              <img src={popupInfo.featuredImage.node.sourceUrl} alt="cafe image" className='w-1/2 object-cover' />
-              <div class="p-2 w-1/2 text-center text-b-n">
-              <p className="text-sm mb-3">{popupInfo.title}</p>
-              <p className="text-xs font-pra mb-2">{popupInfo.adress.adress}</p>
-              <p className="font-pra whitespace-normal text-xs mb-2">{popupInfo.time.open} - {popupInfo.time.close}</p>
-              <Link href={`/cafe/${popupInfo.slug}`}><a className="text-b-p text-sm lg:text-md">Go to detail page</a></Link>
+              <div className='w-screen h-1/3 bg-primary absolute bottom-3 left-0 flex items-center justify-center overflow-hidden'>
+                {popupInfo.featuredImage ? 
+                 <img className='w-1/2 object-cover' src={popupInfo.featuredImage.node.sourceUrl} alt="cafe image" /> :
+                 <img className='w-1/2 object-cover' src='/Noimage.png' alt="cafe image"/>
+                }             
+              <div class="py-2 px-1 w-1/2 text-center text-b-n">
+              <p className="text-xs font-bold mb-2">{popupInfo.title}</p>
+              <p className="font-pra whitespace-normal text-xs mb-1">{popupInfo.time.open} - {popupInfo.time.close}</p>
+              <div className="flex flex-col">
+              <Link href={`/cafe/${popupInfo.slug}`}><a className="text-b-y text-sm lg:text-md">Go to detail page</a></Link>
               <Link href={`https://maps.google.com?q=${popupInfo.location.lat},${popupInfo.location.lng}`}><a className="text-b-y text-sm">View on Google Maps</a></Link>
+              </div>
               <svg onClick={() => setPopupInfo(null)} className="w-6 h-6 absolute top-1 left-1/2 transform -translate-x-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </div>
               </div>
